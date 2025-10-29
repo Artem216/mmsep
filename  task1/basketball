@@ -1,0 +1,262 @@
+@prefix : <http://www.semanticweb.org/artem/ontologies/2025/9/untitled-ontology-2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/artem/ontologies/2025/9/untitled-ontology-2/> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#belongsToLeague
+<http://www.semanticweb.org/owl/owlapi/turtle#belongsToLeague> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                               rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#League> ;
+                                                               rdfs:label "belongs to league"@en ,
+                                                                          "принадлежит лиге"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasPosition
+<http://www.semanticweb.org/owl/owlapi/turtle#hasPosition> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                           rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Position> ;
+                                                           rdfs:label "has position"@en ,
+                                                                      "имеет позицию"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#hostedAt
+<http://www.semanticweb.org/owl/owlapi/turtle#hostedAt> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Game> ;
+                                                        rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Arena> ;
+                                                        rdfs:label "hosted at"@en ,
+                                                                   "проводится на"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#participatesIn
+<http://www.semanticweb.org/owl/owlapi/turtle#participatesIn> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                              rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Game> ;
+                                                              rdfs:label "participates in"@en ,
+                                                                         "участвует в"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#playsFor
+<http://www.semanticweb.org/owl/owlapi/turtle#playsFor> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                        rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                        rdfs:label "plays for"@en ,
+                                                                   "играет за"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#wonGame
+<http://www.semanticweb.org/owl/owlapi/turtle#wonGame> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                       rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Game> ;
+                                                       rdfs:label "won game"@en ,
+                                                                  "выиграл матч"@ru .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Arena
+<http://www.semanticweb.org/owl/owlapi/turtle#Arena> rdf:type owl:Class ;
+                                                     rdfs:label "Arena"@en ,
+                                                                "Арена"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Game
+<http://www.semanticweb.org/owl/owlapi/turtle#Game> rdf:type owl:Class ;
+                                                    rdfs:label "Game"@en ,
+                                                               "Матч"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#League
+<http://www.semanticweb.org/owl/owlapi/turtle#League> rdf:type owl:Class ;
+                                                      rdfs:label "League"@en ,
+                                                                 "Лига"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Player
+<http://www.semanticweb.org/owl/owlapi/turtle#Player> rdf:type owl:Class ;
+                                                      rdfs:label "Player"@en ,
+                                                                 "Игрок"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Position
+<http://www.semanticweb.org/owl/owlapi/turtle#Position> rdf:type owl:Class ;
+                                                        rdfs:label "Position"@en ,
+                                                                   "Позиция"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Team
+<http://www.semanticweb.org/owl/owlapi/turtle#Team> rdf:type owl:Class ;
+                                                    rdfs:label "Team"@en ,
+                                                               "Команда"@ru .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#AnthonyDavis
+<http://www.semanticweb.org/owl/owlapi/turtle#AnthonyDavis> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#hasPosition> <http://www.semanticweb.org/owl/owlapi/turtle#PowerForward> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#playsFor> <http://www.semanticweb.org/owl/owlapi/turtle#Lakers> ;
+                                                            rdfs:label "Anthony Davis"@en ,
+                                                                       "Энтони Дэвис"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Celtics
+<http://www.semanticweb.org/owl/owlapi/turtle#Celtics> rdf:type owl:NamedIndividual ,
+                                                                <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                       <http://www.semanticweb.org/owl/owlapi/turtle#belongsToLeague> <http://www.semanticweb.org/owl/owlapi/turtle#NBA> ;
+                                                       <http://www.semanticweb.org/owl/owlapi/turtle#participatesIn> <http://www.semanticweb.org/owl/owlapi/turtle#Game2023_002> ;
+                                                       <http://www.semanticweb.org/owl/owlapi/turtle#wonGame> <http://www.semanticweb.org/owl/owlapi/turtle#Game2023_002> ;
+                                                       rdfs:label "Boston Celtics"@en ,
+                                                                  "Бостон Селтикс"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Center
+<http://www.semanticweb.org/owl/owlapi/turtle#Center> rdf:type owl:NamedIndividual ,
+                                                               <http://www.semanticweb.org/owl/owlapi/turtle#Position> ;
+                                                      rdfs:label "Center"@en ,
+                                                                 "Центровой"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#ChaseCenter
+<http://www.semanticweb.org/owl/owlapi/turtle#ChaseCenter> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#Arena> ;
+                                                           rdfs:label "Chase Center"@en ,
+                                                                      "Чейз Центр"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Game2023_001
+<http://www.semanticweb.org/owl/owlapi/turtle#Game2023_001> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Game> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#hostedAt> <http://www.semanticweb.org/owl/owlapi/turtle#StaplesCenter> ;
+                                                            rdfs:label "Lakers vs Warriors Game 2023"@en ,
+                                                                       "Матч Лейкерс vs Уорриорз 2023"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Game2023_002
+<http://www.semanticweb.org/owl/owlapi/turtle#Game2023_002> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Game> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#hostedAt> <http://www.semanticweb.org/owl/owlapi/turtle#TDGarden> ;
+                                                            rdfs:label "Celtics vs Warriors Game 2023"@en ,
+                                                                       "Матч Селтикс vs Уорриорз 2023"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#JaysonTatum
+<http://www.semanticweb.org/owl/owlapi/turtle#JaysonTatum> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#hasPosition> <http://www.semanticweb.org/owl/owlapi/turtle#SmallForward> ;
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#playsFor> <http://www.semanticweb.org/owl/owlapi/turtle#Celtics> ;
+                                                           rdfs:label "Jayson Tatum"@en ,
+                                                                      "Джейсон Тейтум"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#KlayThompson
+<http://www.semanticweb.org/owl/owlapi/turtle#KlayThompson> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#hasPosition> <http://www.semanticweb.org/owl/owlapi/turtle#ShootingGuard> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#playsFor> <http://www.semanticweb.org/owl/owlapi/turtle#Warriors> ;
+                                                            rdfs:label "Klay Thompson"@en ,
+                                                                       "Клей Томпсон"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Lakers
+<http://www.semanticweb.org/owl/owlapi/turtle#Lakers> rdf:type owl:NamedIndividual ,
+                                                               <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                      <http://www.semanticweb.org/owl/owlapi/turtle#belongsToLeague> <http://www.semanticweb.org/owl/owlapi/turtle#NBA> ;
+                                                      <http://www.semanticweb.org/owl/owlapi/turtle#participatesIn> <http://www.semanticweb.org/owl/owlapi/turtle#Game2023_001> ;
+                                                      <http://www.semanticweb.org/owl/owlapi/turtle#wonGame> <http://www.semanticweb.org/owl/owlapi/turtle#Game2023_001> ;
+                                                      rdfs:label "Los Angeles Lakers"@en ,
+                                                                 "Лос-Анджелес Лейкерс"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#LeBronJames
+<http://www.semanticweb.org/owl/owlapi/turtle#LeBronJames> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#hasPosition> <http://www.semanticweb.org/owl/owlapi/turtle#SmallForward> ;
+                                                           <http://www.semanticweb.org/owl/owlapi/turtle#playsFor> <http://www.semanticweb.org/owl/owlapi/turtle#Lakers> ;
+                                                           rdfs:label "LeBron James"@en ,
+                                                                      "Леброн Джеймс"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#NBA
+<http://www.semanticweb.org/owl/owlapi/turtle#NBA> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#League> ;
+                                                   rdfs:label "NBA"@en ,
+                                                              "НБА"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#PointGuard
+<http://www.semanticweb.org/owl/owlapi/turtle#PointGuard> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.semanticweb.org/owl/owlapi/turtle#Position> ;
+                                                          rdfs:label "Point Guard"@en ,
+                                                                     "Разыгрывающий"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#PowerForward
+<http://www.semanticweb.org/owl/owlapi/turtle#PowerForward> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Position> ;
+                                                            rdfs:label "Power Forward"@en ,
+                                                                       "Тяжелый форвард"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#ShootingGuard
+<http://www.semanticweb.org/owl/owlapi/turtle#ShootingGuard> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Position> ;
+                                                             rdfs:label "Shooting Guard"@en ,
+                                                                        "Атакующий защитник"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#SmallForward
+<http://www.semanticweb.org/owl/owlapi/turtle#SmallForward> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Position> ;
+                                                            rdfs:label "Small Forward"@en ,
+                                                                       "Легкий форвард"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#StaplesCenter
+<http://www.semanticweb.org/owl/owlapi/turtle#StaplesCenter> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Arena> ;
+                                                             rdfs:label "Staples Center"@en ,
+                                                                        "Стэйплс Центр"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#StephenCurry
+<http://www.semanticweb.org/owl/owlapi/turtle#StephenCurry> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/owl/owlapi/turtle#Player> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#hasPosition> <http://www.semanticweb.org/owl/owlapi/turtle#PointGuard> ;
+                                                            <http://www.semanticweb.org/owl/owlapi/turtle#playsFor> <http://www.semanticweb.org/owl/owlapi/turtle#Warriors> ;
+                                                            rdfs:label "Stephen Curry"@en ,
+                                                                       "Стефен Карри"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#TDGarden
+<http://www.semanticweb.org/owl/owlapi/turtle#TDGarden> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#Arena> ;
+                                                        rdfs:label "TD Garden"@en ,
+                                                                   "ТД Гарден"@ru .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Warriors
+<http://www.semanticweb.org/owl/owlapi/turtle#Warriors> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/owl/owlapi/turtle#Team> ;
+                                                        <http://www.semanticweb.org/owl/owlapi/turtle#belongsToLeague> <http://www.semanticweb.org/owl/owlapi/turtle#NBA> ;
+                                                        <http://www.semanticweb.org/owl/owlapi/turtle#participatesIn> <http://www.semanticweb.org/owl/owlapi/turtle#Game2023_001> ,
+                                                                                                                      <http://www.semanticweb.org/owl/owlapi/turtle#Game2023_002> ;
+                                                        rdfs:label "Golden State Warriors"@en ,
+                                                                   "Голден Стэйт Уорриорз"@ru .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
